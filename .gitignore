@@ -42,3 +42,11 @@ CLAUDE.local.md
 dist/
 __pycache__/
 .venv/
+
+# --- Duppins Technology scaffold ---
+!.env.example
+build/
+/*.zip
+.phpunit.result.cache
+.claude/scheduled_tasks.lock
+desktop.ini
