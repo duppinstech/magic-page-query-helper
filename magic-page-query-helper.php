@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name: 	  Magic Page Query Helper
- * Plugin URI: 		  https://github.com/oduppinsjr/magic-page-query-helper
+ * Plugin URI: 		  https://github.com/duppinstech/magic-page-query-helper
  * Description: 	  Reduces location-term query load when using Magic Page (or similar) with many locations. Bulk-loads all location term meta in one query and short-circuits get_term_meta() so the main plugin never runs 10k+ individual queries. Safe to use with LiteSpeed/other full-page cache; does not replace Magic Page cache.
  * Version: 		  1.0.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
- * Update URI:        https://github.com/oduppinsjr/magic-page-query-helper
+ * Update URI:        https://github.com/duppinstech/magic-page-query-helper
  * Author:            Duppins Technology
  * Author URI: 	      https://duppinstech.com
  * License:           GPL-2.0-or-later
@@ -17,6 +17,23 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+define( 'MPQH_VERSION', '1.0.0' );
+define( 'MPQH_FILE', __FILE__ );
+
+require_once __DIR__ . '/includes/class-mpqh-github-updater.php';
+
+// Updates from GitHub Releases. Booted at load (not admin_init) so WP-Cron and background auto-updates see releases.
+// Disable with define( 'MPQH_DISABLE_GITHUB_UPDATER', true ).
+MPQH_GitHub_Updater::boot(
+	array(
+		'file'    => MPQH_FILE,
+		'version' => MPQH_VERSION,
+		'owner'   => 'duppinstech',
+		'repo'    => 'magic-page-query-helper',
+		'prefix'  => 'mpqh',
+	)
+);
 
 /**
  * Load all term meta and all location terms in bulk so get_term_meta() and get_term()
