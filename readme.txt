@@ -4,7 +4,7 @@ Tags: performance, taxonomy, database
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,10 +64,17 @@ Compare "Short-circuited" with "get_term_meta filter calls" on the dashboard. Wh
 
 == Changelog ==
 
+= 1.0.1 =
+* Plugins screen shows Settings, Sponsor, View details, and Support.
+* Updates install from GitHub Releases.
+
 = 1.0.0 =
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Plugins screen details, and updates from GitHub Releases.
 
 = 1.0.0 =
 Initial release.

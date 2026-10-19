@@ -3,7 +3,7 @@
  * Plugin Name: 	  Magic Page Query Helper
  * Plugin URI: 		  https://github.com/duppinstech/magic-page-query-helper
  * Description: 	  Reduces location-term query load when using Magic Page (or similar) with many locations. Bulk-loads all location term meta in one query and short-circuits get_term_meta() so the main plugin never runs 10k+ individual queries. Safe to use with LiteSpeed/other full-page cache; does not replace Magic Page cache.
- * Version: 		  1.0.0
+ * Version: 		  1.0.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Update URI:        https://github.com/duppinstech/magic-page-query-helper
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MPQH_VERSION', '1.0.0' );
+define( 'MPQH_VERSION', '1.0.1' );
 define( 'MPQH_FILE', __FILE__ );
 
 require_once __DIR__ . '/includes/class-mpqh-github-updater.php';
