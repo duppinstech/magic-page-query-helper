@@ -13,9 +13,9 @@ Read by `finance-reviewer`, `marketing-reviewer`, `legal-reviewer` and `product-
 ## Tiers
 | Tier | What's included | Price | Distribution |
 |---|---|---|---|
-| Core | Bulk location-term loading, Settings → MPQH Dashboard, plugins-screen details, and GitHub updates | _TBD_ | GitHub Releases (`magic-page-query-helper.zip`) |
+| Core | Bulk location-term loading, Settings → MPQH Dashboard, plugins-screen details, and GitHub updates | No price | GitHub Releases (`magic-page-query-helper.zip`) |
 
 ## Cost drivers
 - No paid third-party API. The updater calls the public GitHub Releases API. A GitHub token in the updater config is optional.
-- Hosting: _TBD (Odell)_
-- Support time: _TBD (Odell)_
+- Hosting: not applicable
+- Support time: none
