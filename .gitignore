@@ -32,3 +32,13 @@ vendor/
 phpunit.xml
 /wp-tests-config.php
 coverage/
+
+# Local agent files
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/worktrees/
+
+# Caches from other stacks
+dist/
+__pycache__/
+.venv/
