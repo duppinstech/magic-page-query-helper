@@ -35,6 +35,18 @@ MPQH_GitHub_Updater::boot(
 	)
 );
 
+require_once __DIR__ . '/includes/class-magic-page-query-helper-plugin-info.php';
+
+// Plugins screen links and the View details modal. No public guide URL, so Help is omitted.
+MPQH_Plugin_Info::boot(
+	array(
+		'file'         => MPQH_FILE,
+		'settings_url' => 'options-general.php?page=mpqh-dashboard',
+		'help_url'     => '',
+		'support_url'  => 'mailto:support@duppinstech.com',
+	)
+);
+
 /**
  * Load all term meta and all location terms in bulk so get_term_meta() and get_term()
  * are served from cache instead of 10k+ individual queries. Uses get_term_metadata
